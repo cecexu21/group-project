@@ -46,7 +46,7 @@ library(psych)
 
 
 In our final group assignment we will analyse data about Airbnb listings and fit a model to predict the total cost for two people staying 4 nights in an AirBnB in a city. 
-
+# Data displaying
 
 ```{r load_data, echo=FALSE, message=FALSE, warning=FALSE, cache=TRUE, results=FALSE}
 listings <- vroom("http://data.insideairbnb.com/australia/nsw/sydney/2021-09-08/data/listings.csv.gz") %>% 
