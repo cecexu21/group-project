@@ -1,12 +1,9 @@
-# group-project
-
 ---
-title: "Final Group Project: AirBnB analytics"
+title: "groupb9 project"
+output: html_document
 date: "12 Oct 2021"
-author: "Reading Time: About 8 minutes"
-output:
-  html_document:
-    highlight: zenburn
+author: "Group B9"
+ highlight: zenburn
     theme: flatly
     toc: yes
     toc_float: yes
@@ -160,9 +157,6 @@ listings_num_variables<- listings_num_variables[, !(names(listings_num_variables
 listings_num_variables <- listings_num_variables %>% 
   filter(maximum_nights< 360) 
 
-listings_num_variables
-
-library(corrplot)
 correl = cor(listings_num_variables, use="pairwise.complete.obs")
 corrplot(correl, method = "circle") #let's look at the correlation in a different form
 ```
@@ -172,7 +166,7 @@ corrplot(correl, method = "circle") #let's look at the correlation in a differen
 dropping2<- c("beds", "number_of_reviews_ltm","number_of_reviews_l30d","review_scores_accuracy", "review_scores_checkin", "review_scores_location", "review_scores_value", "review_per_month", "host_listings_count")
 
 listings_num_variables<- listings_num_variables[, !(names(listings_num_variables)%in% dropping2)]  #Removed other less relevant variables
-listings_num_variables
+listings_num_variabless
 
 ggpairs(listings_num_variables) #Analyzing the correlations between the variables
 
